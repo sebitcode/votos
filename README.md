@@ -88,7 +88,7 @@ En este proyecto nos centramos en realizar un esquema basico para registrar los 
 
 * [![Python][Python.py]][Python-url]
 * [![Django REST framework][Django REST framework.py]][Django REST framework-url]
-* [[!PostgreSql][Postgres]][Postgres-url]
+* [[!PostgreSql][Postgres.js]][Postgres-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -241,4 +241,4 @@ Sebastian Herrera Granada - sebitcode@gmail.com
 [Django REST framework-url]: https://www.django-rest-framework.org/
 [Django REST framework.py]: https://img.shields.io/badge/Django.py-green?style=for-the-badge&logo=Django&logoColor=white
 [Postgres-url]: https://www.python.org/
-[Postgres]: https://img.shields.io/badge/postgresql-blue?style=for-the-badge&logo=PostgreSQL&logoColor=white
+[Postgres.js]: https://img.shields.io/badge/postgresql-blue?style=for-the-badge&logo=PostgreSQL&logoColor=white
