@@ -108,26 +108,26 @@ Estas son las cosas que vas a necesitar para ejecutar el proyecto desde una mac 
 ### Installation
 
 1. Get Docker at [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
-1.5 Get Brew at [https://mac.install.guide/homebrew/3.html](https://mac.install.guide/homebrew/3.html)
-2. Get Docker Compose Plugin at [https://formulae.brew.sh/formula/docker-compose#default](https://formulae.brew.sh/formula/docker-compose#default)
-3. Download the repo as a ZIP
-4. Build containers before get up the project
+2. Get Brew at [https://mac.install.guide/homebrew/3.html](https://mac.install.guide/homebrew/3.html)
+3. Get Docker Compose Plugin at [https://formulae.brew.sh/formula/docker-compose#default](https://formulae.brew.sh/formula/docker-compose#default)
+4. Download the repo as a ZIP
+5. Build containers before get up the project
    ```sh
    docker-compose -f local.yml build
    ```
-5. Migrate models
+6. Migrate models
    ```sh
    docker-compose -f local.yml run --rm django python manage.py migrate
    ```
-6. Set up the base data
+7. Set up the base data
    ```sh
    docker-compose -f local.yml run --rm django python manage.py base-data
    ```
-7. Run the project
+8. Run the project
    ```sh
    docker-compose -f local.yml up
    ```
-4. Set the POSTMAN collection `Votos.postman_collection.json` is already in project folder
+9. Set the POSTMAN collection `Votos.postman_collection.json` is already in project folder
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
