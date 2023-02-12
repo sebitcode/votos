@@ -238,4 +238,4 @@ Sebastian Herrera Granada - sebitcode@gmail.com
 [Python-url]: https://www.python.org/
 [Python.py]: https://img.shields.io/badge/python.py-000000?style=for-the-badge&logo=Python&logoColor=white
 [Django REST framework-url]: https://www.django-rest-framework.org/
-[Django REST framework.js]: https://img.shields.io/badge/Django.py-green?style=for-the-badge&logo=Django&logoColor=white
+[Django REST framework.py]: https://img.shields.io/badge/Django.py-green?style=for-the-badge&logo=Django&logoColor=white
