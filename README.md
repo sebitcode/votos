@@ -88,6 +88,7 @@ En este proyecto nos centramos en realizar un esquema basico para registrar los 
 
 * [![Python][Python.py]][Python-url]
 * [![Django REST framework][Django REST framework.py]][Django REST framework-url]
+* [[!PostgreSql][Postgres]][Postgres-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
