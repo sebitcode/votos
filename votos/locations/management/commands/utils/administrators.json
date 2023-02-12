@@ -1,0 +1,16 @@
+[
+  {
+    "names": "sebastian",
+    "surnames": "herrera",
+    "password": "admin321",
+    "address": "XXX",
+    "cc": "222"
+  },
+  {
+    "names": "santiago",
+    "surnames": "granada",
+    "password": "admin321",
+    "address": "XXX",
+    "cc": "333"
+  }
+]

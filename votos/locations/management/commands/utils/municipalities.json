@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Uraba",
+    "department": "Antioquia"
+  },
+  {
+    "name": "Puerto Berrio",
+    "department": "Antioquia"
+  },
+  {
+    "name": "Medina",
+    "department": "Cundinamarca"
+  },
+  {
+    "name": "Rionegro",
+    "department": "Cundinamarca"
+  },
+  {
+    "name": "Atrato",
+    "department": "Choco"
+  },
+  {
+    "name": "San Juan",
+    "department": "Choco"
+  },
+  {
+    "name": "Puerto Alegria",
+    "department": "Amazonas"
+  },
+  {
+    "name": "El Encanto",
+    "department": "Amazonas"
+  }
+]

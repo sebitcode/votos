@@ -1,0 +1,42 @@
+[
+  {
+    "municipality": "Uraba",
+    "address": "Antioquia",
+    "name": "1"
+  },
+  {
+    "municipality": "Puerto Berrio",
+    "address": "Antioquia",
+    "name": "2"
+  },
+  {
+    "municipality": "Medina",
+    "address": "Cundinamarca",
+    "name": "3"
+  },
+  {
+    "municipality": "Rionegro",
+    "address": "Cundinamarca",
+    "name": "4"
+  },
+  {
+    "municipality": "Atrato",
+    "address": "Choco",
+    "name": "5"
+  },
+  {
+    "municipality": "San Juan",
+    "address": "Choco",
+    "name": "6"
+  },
+  {
+    "municipality": "Puerto Alegria",
+    "address": "Amazonas",
+    "name": "7"
+  },
+  {
+    "municipality": "El Encanto",
+    "address": "Amazonas",
+    "name": "8"
+  }
+]

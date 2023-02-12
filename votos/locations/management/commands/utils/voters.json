@@ -1,0 +1,38 @@
+[
+  {
+    "names": "sara",
+    "surnames": "xy",
+    "address": "XXX",
+    "cc": "666",
+    "neighborhood": "CCC",
+    "table": "1",
+    "leader": "sara_herrera_leader"
+  },
+  {
+    "names": "luisa",
+    "surnames": "xy",
+    "address": "XXX",
+    "cc": "777",
+    "neighborhood": "CCC",
+    "table": "1",
+    "leader": "luisa_granada_leader"
+  },
+  {
+    "names": "Jhon",
+    "surnames": "xy",
+    "address": "XXX",
+    "cc": "666",
+    "neighborhood": "CCC",
+    "table": "2",
+    "leader": "sara_herrera_leader"
+  },
+  {
+    "names": "camila",
+    "surnames": "xy",
+    "address": "XXX",
+    "cc": "777",
+    "neighborhood": "CCC",
+    "table": "2",
+    "leader": "luisa_granada_leader"
+  }
+]

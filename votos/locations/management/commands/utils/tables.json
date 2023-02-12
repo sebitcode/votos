@@ -1,0 +1,42 @@
+[
+  {
+    "polling_station": "6",
+    "votes": 2,
+    "number": 1
+  },
+  {
+    "polling_station": "7",
+    "votes": 2,
+    "number": 2
+  },
+  {
+    "polling_station": "8",
+    "votes": 2,
+    "number": 3
+  },
+  {
+    "polling_station": "1",
+    "votes": 2,
+    "number": 4
+  },
+  {
+    "polling_station": "2",
+    "votes": 2,
+    "number": 5
+  },
+  {
+    "polling_station": "3",
+    "votes": 2,
+    "number": "6"
+  },
+  {
+    "polling_station": "4",
+    "votes": 2,
+    "number": "7"
+  },
+  {
+    "polling_station": "5",
+    "votes": 2,
+    "number": "8"
+  }
+]

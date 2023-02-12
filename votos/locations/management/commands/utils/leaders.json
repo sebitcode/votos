@@ -1,0 +1,18 @@
+[
+  {
+    "names": "sara",
+    "surnames": "herrera",
+    "password": "admin321",
+    "address": "XXX",
+    "cc": "444",
+    "administrator": "sebastian_herrera_administrator"
+  },
+  {
+    "names": "luisa",
+    "surnames": "granada",
+    "password": "admin321",
+    "address": "XXX",
+    "cc": "555",
+    "administrator": "santiago_granada_administrator"
+  }
+]

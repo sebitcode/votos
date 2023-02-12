@@ -1,0 +1,1209 @@
+{
+	"info": {
+		"_postman_id": "0fd59af5-eb64-49ba-bd21-81c4e8696bac",
+		"name": "Votos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13554805"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"santiago_granada_administrator\",\n    \"password\": \"admin321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/token/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Voters",
+			"item": [
+				{
+					"name": "Voters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/voters?mesa_id&municipio_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"voters"
+							],
+							"query": [
+								{
+									"key": "leader_id",
+									"value": "73",
+									"disabled": true
+								},
+								{
+									"key": "mesa_id",
+									"value": null
+								},
+								{
+									"key": "municipio_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voters Count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/voters/count?leader_id=&table_id=115&municipio_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"voters",
+								"count"
+							],
+							"query": [
+								{
+									"key": "leader_id",
+									"value": ""
+								},
+								{
+									"key": "table_id",
+									"value": "115"
+								},
+								{
+									"key": "municipio_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voter By Username",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/voters/:username",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"voters",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voter",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/voters/:username",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"voters",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voter",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\": \"sara_xy\",\n    \"names\": \"sa\",\n    \"surnames\": \"xy\",\n    \"address\": \"XXX\",\n    \"neighborhood\": \"CCC\",\n    \"cc\": \"666\",\n    \"leader\": 1,\n    \"table\": 1,\n    \"created\": \"2023-02-11T20:36:56.942575-05:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/voters/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"voters",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voter",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/voters/:username",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"voters",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Leaders",
+			"item": [
+				{
+					"name": "Leaders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/leaders/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"leaders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leader By Username",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/leaders/:username",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"leaders",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leader",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/leaders/:username/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"leaders",
+								":username",
+								""
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leader",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"prueba123\",\n    \"names\": \"lo\",\n    \"surnames\": \"tsuki\",\n    \"address\": \"XXX\",\n    \"cc\": \"555\",\n    \"administrator\": 76\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/leaders/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"leaders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leader",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/leaders/:username",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"leaders",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Administrators",
+			"item": [
+				{
+					"name": "Administrators",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/administrators/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"administrators",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrator By Username",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/administrators/:username",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"administrators",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrator",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/administrators/:username/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"administrators",
+								":username",
+								""
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/administrators/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"administrators",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrator",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/administrators/:username",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"administrators",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tables",
+			"item": [
+				{
+					"name": "Tables",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/tables/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Table By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/tables/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Table",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 1,\n    \"votes\": 600,\n    \"polling_station\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/tables/:id/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Table",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 100,\n    \"votes\": 600,\n    \"polling_station\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/tables/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Table",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/tables/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tables",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Polling Stations",
+			"item": [
+				{
+					"name": "Polling Stations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/polling-stations/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"polling-stations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Polling Station By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/polling-stations/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"polling-stations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Polling Station",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/polling-stations/:id/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"polling-stations",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Polling Station",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"8\",\n    \"address\": \"Antioquia\",\n    \"municipality\": 123\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/polling-stations/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"polling-stations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Polling Station",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/polling-stations/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"polling-stations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Municipalities",
+			"item": [
+				{
+					"name": "Municipalities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/municipalities/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"municipalities",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Municipality By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/municipalities/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"municipalities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Municipalities",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/municipalities/:id/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"municipalities",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Municipalities",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"GG\",\n    \"department\": 95\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/municipalities/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"municipalities",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Municipalities",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/municipalities/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"municipalities",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "Departments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/departments",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"departments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Department By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/departments/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"departments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Department",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Europa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/departments/:id/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"departments",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "91"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Department",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"CANDINA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/departments/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"departments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Department",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/departments/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"departments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
